@@ -98,3 +98,14 @@ Applicant Tracking Systems (ATS) parse resumes automatically, so it's important 
    - Stick to standard sections (e.g., Experience, Education).
 
 If issues are found, simplify the Markdown content and regenerate the PDF.
+
+## General Resume Tips 💡
+
+Here are some tips to make your resume more effective:
+
+- **Quantify accomplishments**: Use specific numbers to demonstrate impact, e.g., "Increased sales by 20%" instead of just "Increased sales".
+- **Use action verbs**: Start each bullet point with strong verbs like "Led", "Developed", "Managed", or "Optimized".
+- **Tailor to the job**: Customize your resume to match the job description by highlighting relevant skills and experiences.
+- **Keep it concise**: Aim for one page if possible, focusing on the most important information.
+- **Proofread carefully**: Check for spelling, grammar, and formatting errors multiple times.
+- **Include keywords**: Incorporate terms from the job posting to pass ATS filters.
