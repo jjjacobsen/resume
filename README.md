@@ -74,9 +74,9 @@ Applicant Tracking Systems (ATS) parse resumes automatically, so it's important 
 
 1. **Use Online ATS Checkers** 🔍
    Upload your `resume.pdf` to free tools like:
-   - [Jobscan](https://www.jobscan.co/ats-resume-checker)
-   - [Resume Worded](https://resumeworded.com/ats-resume-scan)
-   - [VMock](https://www.vmock.com/) (may require sign-up)
+   - [Jobscan](https://www.jobscan.co)
+   - [Resume Worded](https://resumeworded.com)
+   - [VMock](https://www.vmock.com/)
 
    These tools simulate ATS parsing and provide feedback on readability, keywords, and formatting issues.
 
