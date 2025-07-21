@@ -1,29 +1,100 @@
-# Resume Repository
+# Resume Repository 📝
 
 This repository contains my resume in Markdown format (`resume.md`). The primary purpose is to maintain the resume in an editable text format and generate a PDF version using Pandoc.
 
-## Requirements
+## Requirements ⚙️
 
-- [Pandoc](https://pandoc.org/) must be installed on your system. You can download it from the official website or install via package managers like Homebrew on macOS. To generate PDFs, you will also need a TeX distribution like BasicTeX installed.
+To generate the PDF, [Pandoc](https://pandoc.org/) must be installed on your system. You can download it from the official website or install it via package managers like Homebrew on macOS. Additionally, to create PDFs, you'll need a TeX distribution such as BasicTeX.
 
 ```bash
 brew install pandoc
 brew install --cask basictex
 ```
 
-## Generating the PDF
+## Development Environment Setup 🚀
 
-To convert the `resume.md` file to a PDF, open your terminal, navigate to the repository directory, and run the following command:
+If you want to set up the environment for development (e.g., for linting or automation), follow these steps:
+
+1. **Install Python Tools** 🛠️
+   ```bash
+   # Install pyenv (Python version manager) and pipx (global package installer)
+   brew install pyenv pipx
+
+   # Ensure pipx is in your PATH
+   pipx ensurepath
+   ```
+
+2. **Install PDM** 📦
+   ```bash
+   pipx install pdm
+   ```
+
+3. **Install Python Version** 🐍
+   ```bash
+   # Install Python 3.13.5 and set it as the local version
+   pyenv install 3.13.5
+   pyenv local 3.13.5
+   ```
+
+4. **Install Project Dependencies** 🔧
+   ```bash
+   # Install all project dependencies using PDM
+   pdm install
+   ```
+
+5. **Set Up Pre-commit Hooks** ✅
+   ```bash
+   # Install pre-commit hooks
+   pdm run pre-commit install
+
+   # Verify the setup by running pre-commit on all files
+   pdm run pre-commit run --all-files
+   ```
+
+## Generating the PDF 📄
+
+To convert `resume.md` to a PDF, navigate to the repository directory in your terminal and run:
 
 ```bash
 pandoc resume.md -o resume.pdf
 ```
 
-This will create a `resume.pdf` file in the same directory.
+This command will generate `resume.pdf` in the same directory.
 
-### Customization
+### Customization 🎨
 
-- For adding styles, you can use a CSS file with the `--css` option or templates. Refer to [Pandoc's documentation](https://pandoc.org/MANUAL.html#creating-a-pdf) for more advanced usage.
-- If you want to include metadata or use a specific template, modify the command accordingly, e.g., `pandoc resume.md --template=template.tex -o resume.pdf`.
+- For styling, refer to [Pandoc's documentation](https://pandoc.org/MANUAL.html#creating-a-pdf).
+- To include metadata or use a custom template, adjust the command, e.g., `pandoc resume.md --template=template.tex -o resume.pdf`.
 
-Feel free to edit `resume.md` to update the resume content and regenerate the PDF as needed.
+Feel free to edit `resume.md` to update the content and regenerate the PDF as needed.
+
+## Ensuring ATS Compatibility 🤖
+
+Applicant Tracking Systems (ATS) parse resumes automatically, so it's important to ensure your PDF is readable by these systems. The PDF generated from Markdown via Pandoc is generally simple and ATS-friendly, but here's how to verify:
+
+1. **Use Online ATS Checkers** 🔍
+   Upload your `resume.pdf` to free tools like:
+   - [Jobscan](https://www.jobscan.co/ats-resume-checker)
+   - [Resume Worded](https://resumeworded.com/ats-resume-scan)
+   - [VMock](https://www.vmock.com/) (may require sign-up)
+
+   These tools simulate ATS parsing and provide feedback on readability, keywords, and formatting issues.
+
+2. **Manual Text Extraction Test** 📋
+   Convert the PDF to plain text and check if the content flows logically without garbled text:
+   ```bash
+   # Install pdf2txt if needed (via pip or brew install poppler)
+   pdftotext resume.pdf resume.txt
+
+   # Then open resume.txt in a text editor to review
+   ```
+
+   Ensure sections, bullet points, and details are preserved without visual elements disrupting the text.
+
+3. **Best Practices for ATS-Friendly Resumes** 💡
+   - Use standard fonts (e.g., Arial, Times New Roman) – customize via Pandoc if needed.
+   - Avoid tables, images, headers/footers, or complex layouts in `resume.md`.
+   - Include relevant keywords from job descriptions naturally.
+   - Stick to standard sections (e.g., Experience, Education).
+
+If issues are found, simplify the Markdown content and regenerate the PDF.
