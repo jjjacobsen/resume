@@ -7,48 +7,27 @@ This repository contains my resume in Markdown format (`resume.md`). The primary
 To generate the PDF, [Pandoc](https://pandoc.org/) must be installed on your system. You can download it from the official website or install it via package managers like Homebrew on macOS. Additionally, to create PDFs, you'll need a TeX distribution such as BasicTeX.
 
 ```bash
-brew install pandoc
+brew install pandoc pipx
 brew install --cask basictex
 ```
 
-## Development Environment Setup 🚀
+## Development Setup 🚀
 
-If you want to set up the environment for development (e.g., for linting or automation), follow these steps:
+This project uses pre-commit hooks for code quality. To set up:
 
-1. **Install Python Tools** 🛠️
+1. **Install Pre-commit** 🛠️
    ```bash
-   # Install pyenv (Python version manager) and pipx (global package installer)
-   brew install pyenv pipx
-
-   # Ensure pipx is in your PATH
-   pipx ensurepath
+   # Install pre-commit globally using pipx
+   pipx install pre-commit
    ```
 
-2. **Install PDM** 📦
-   ```bash
-   pipx install pdm
-   ```
-
-3. **Install Python Version** 🐍
-   ```bash
-   # Install Python 3.13.5 and set it as the local version
-   pyenv install 3.13.5
-   pyenv local 3.13.5
-   ```
-
-4. **Install Project Dependencies** 🔧
-   ```bash
-   # Install all project dependencies using PDM
-   pdm install
-   ```
-
-5. **Set Up Pre-commit Hooks** ✅
+2. **Set Up Pre-commit Hooks** ✅
    ```bash
    # Install pre-commit hooks
-   pdm run pre-commit install
+   pre-commit install
 
    # Verify the setup by running pre-commit on all files
-   pdm run pre-commit run --all-files
+   pre-commit run --all-files
    ```
 
 ## Generating the PDF 📄
