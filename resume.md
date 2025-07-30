@@ -14,7 +14,7 @@ header-includes: |
 
 \vspace*{-0.75in}
 \begin{center}
-Nashville, TN | (801) 717-8177 | \href{https://www.linkedin.com/in/jonahjacobsen}{LinkedIn} | \href{https://github.com/jjjacobsen}{GitHub} | \href{https://www.jonahjacobsen.com}{Website} | \href{mailto:jjacobsen115@gmail.com}{jjacobsen115@gmail.com}
+Nashville, TN | (801) 717-8177 | \href{https://www.linkedin.com/in/jonahjacobsen}{LinkedIn} | \href{https://github.com/jjjacobsen}{GitHub} | \href{https://jonahjacobsen.com}{Website} | \href{mailto:jjacobsen115@gmail.com}{jjacobsen115@gmail.com}
 \end{center}
 
 ## Summary

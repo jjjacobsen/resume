@@ -9,6 +9,9 @@ To generate the PDF, [Pandoc](https://pandoc.org/) must be installed on your sys
 ```bash
 brew install pandoc pipx
 brew install --cask basictex
+
+# Install invoke for task automation
+pipx install invoke
 ```
 
 ## Development Setup 🚀
@@ -32,7 +35,28 @@ This project uses pre-commit hooks for code quality. To set up:
 
 ## Generating the PDF 📄
 
-To convert `resume.md` to a PDF, navigate to the repository directory in your terminal and run:
+### Using Invoke Tasks (Recommended) 🚀
+
+This project includes invoke tasks for streamlined resume management:
+
+```bash
+# Build the PDF from Markdown
+inv build
+
+# Deploy the PDF to iCloud and website locations
+inv deploy
+
+# Build and deploy in one command
+inv all
+```
+
+The `deploy` task copies the resume to:
+- `~/Library/Mobile Documents/com~apple~CloudDocs/job/resume/Jonah_Jacobsen_Resume.pdf` (iCloud)
+- `~/Projects/website/public/jonah_jacobsen_resume.pdf` (website)
+
+### Manual PDF Generation 📝
+
+Alternatively, you can manually convert `resume.md` to a PDF:
 
 ```bash
 pandoc resume.md -o resume.pdf
